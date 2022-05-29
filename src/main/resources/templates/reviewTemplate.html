@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Review</title>
+</head>
+<body>
+
+<h1 th:text="${reviewModel.name}">A Review</h1>
+
+<main>
+    <h2 th:text="${reviewModel.verdict}"></h2>
+        <p>
+            <a href="/reviews">Reviews</a>
+        </p>
+</main>
+
+</body>
+</html>
