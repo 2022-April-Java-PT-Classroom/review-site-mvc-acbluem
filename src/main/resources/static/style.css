@@ -1,6 +1,7 @@
 body {
     font-family: Arial, sans-serif;
     color: #503030;
+    background-color: #f5efef;
 }
 
 .container {
@@ -35,5 +36,26 @@ body {
 }
 
 ul {
-    list-style: square;
+    text-align: center;
+    list-style: none;
+}
+
+li {
+    padding-left: 0;
+}
+
+#center {
+    text-align: center;
+}
+
+img {
+    display: block;
+    max-width: 200px;
+    margin: auto;
+}
+
+a {
+  color: #301d1d;
+  font-weight: bolder;
+  text-decoration: none;
 }

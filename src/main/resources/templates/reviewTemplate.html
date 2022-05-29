@@ -18,8 +18,8 @@
     <section class="grid-item grid-item-2">
         <main>
             <p th:text="${reviewModel.verdict}"></p>
-            <img th:src="@{/images/{name}.jpg(name=${reviewModel.name})}" width="200px">
-            <p>
+            <img th:src="@{/images/{name}.jpg(name=${reviewModel.name})}">
+            <p id="center">
                 <a href="/reviews">Return to the list</a>
             </p>
         </main>
