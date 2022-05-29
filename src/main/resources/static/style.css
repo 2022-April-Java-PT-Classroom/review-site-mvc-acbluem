@@ -1,3 +1,36 @@
 body {
-  background-color: #f0fff0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: grid;
+    grid-template: 1fr 3fr / 1fr;
+    gap: 0;
+    margin: auto;
+    padding: 0;
+    max-width: 800px;
+    width: 90%;
+    background: repeating-linear-gradient(#d9bfbf, #ecdfdf 20px, #e2cfcf 20px, #e2cfcf 25px);
+    justify-content: center;
+    align-content: center;
+}
+
+.grid-item {
+    opacity: .8;
+}
+
+.grid-item-1 {
+    color: #333333;
+    background-image: linear-gradient(to top, #fff, transparent);
+    text-shadow: 1px 1px #fff;
+}
+
+.grid-item-2 {
+    background-image: linear-gradient(to bottom, #fff, transparent);
+    opacity: .8;
+    border-top: 2px solid #000;
+}
+
+ul {
+    list-style: square;
 }
