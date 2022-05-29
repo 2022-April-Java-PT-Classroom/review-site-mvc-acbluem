@@ -17,10 +17,11 @@
 
     <section class="grid-item grid-item-2">
         <main>
-            <h2 th:text="${reviewModel.verdict}"></h2>
-                <p>
-                    <a href="/reviews">Return to the list</a>
-                </p>
+            <p th:text="${reviewModel.verdict}"></p>
+            <img th:src="@{/images/{name}.jpg(name=${reviewModel.name})}" width="200px">
+            <p>
+                <a href="/reviews">Return to the list</a>
+            </p>
         </main>
     </section>
 </div>
