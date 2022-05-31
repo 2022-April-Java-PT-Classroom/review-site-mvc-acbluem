@@ -18,39 +18,18 @@
     <section class="grid-item grid-item-2">
         <main>
             <p>
-                Welcome to my review site for childhood pets.
+                Welcome to my review site for my childhood pets.
+                This is not a complete list of all the pets I had growing up,
+                but this is a list of the most memorable ones.
             </p>
             <p id="center">
-                Click on a pet name for their review:
+                Click on a pet name to learn more:
             </p>
             <ul>
                 <li th:each="review : ${reviewsModel}">
                     <a th:href="@{/review(id=${review.id})}" th:text="${review.name}"></a>
                 </li>
             </ul>
-            <p>
-                Submit a pet using the form below:
-            </p>
-            <form th:action="@{/reviews}" method="post" th:object="${review}">
-                <p>
-                    <label>Pet Name:</label>
-                    <br>
-                    <input type="text" th:field="*{name}" />
-                </p>
-                <p>
-                    <label>Id:</label>
-                    <br>
-                    <input type="text" th:field="*{id}" />
-                </p>
-                <p>
-                    <label>Pet info and rating:</label>
-                    <br>
-                    <textarea rows="5" cols="15" th:field="*{verdict}"></textarea>
-                </p>
-                <p>
-                    <input type="submit" value="Submit" />
-                </p>
-            </form>
         </main>
     </section>
 </div>
