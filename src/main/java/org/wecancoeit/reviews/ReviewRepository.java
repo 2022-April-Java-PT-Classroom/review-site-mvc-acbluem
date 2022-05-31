@@ -4,11 +4,10 @@ import org.springframework.stereotype.Repository;
 
 import java.util.Collection;
 import java.util.HashMap;
-import java.util.Map;
 
 @Repository
 public class ReviewRepository {
-    Map<Long, Review> reviewsList = new HashMap<>();
+    private HashMap<Long, Review> reviewsList = new HashMap<>();
 
     public ReviewRepository() {
         Review chase = new Review(1L, "Chase",
@@ -38,5 +37,13 @@ public class ReviewRepository {
 
     public Collection<Review> findAll() {
         return reviewsList.values();
+    }
+
+    public Review createReview(Review review) {
+        return reviewsList.put(review.getId(), review);
+    }
+
+    public void addToRepo(Review newReview) {
+        reviewsList.put(newReview.getId(), newReview);
     }
 }

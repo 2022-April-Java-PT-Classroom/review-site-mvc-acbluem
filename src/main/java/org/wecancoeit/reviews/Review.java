@@ -11,6 +11,10 @@ public class Review {
         this.verdict = verdict;
     }
 
+    public Review() {
+
+    }
+
     public Long getId() {
         return id;
     }
