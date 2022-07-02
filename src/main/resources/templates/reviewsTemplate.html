@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link th:href="@{style.css}" href="../static/style.css"
+          rel="stylesheet">
+    <title>Reviews of Childhood Pets</title>
+</head>
+<body>
+
+<div class="container">
+    <section class="grid-item grid-item-1">
+        <header>
+            <h1>Review List of Childhood Pets</h1>
+        </header>
+    </section>
+
+    <section class="grid-item grid-item-2">
+        <main>
+            <p>
+                Welcome to my review site for my childhood pets.
+                This is not a complete list of all the pets I had growing up,
+                but this is a list of the most memorable ones.
+            </p>
+            <p id="center">
+                Click on a pet name to learn more:
+            </p>
+            <ul>
+                <li th:each="review : ${reviewsModel}">
+                    <a th:href="@{/review(id=${review.id})}" th:text="${review.name}"></a>
+                </li>
+            </ul>
+        </main>
+    </section>
+</div>
+
+</body>
+</html>
